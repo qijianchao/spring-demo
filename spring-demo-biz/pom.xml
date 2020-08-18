@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.qjc</groupId>
+        <artifactId>spring-demo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.qjc</groupId>
+    <artifactId>spring-demo-biz</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-demo-biz</name>
+    <description>业务逻辑层</description>
+
+    <dependencies>
+        <!-- spring boot redis 缓存引入 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- lettuce pool 缓存连接池 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.qjc</groupId>
+            <artifactId>spring-demo-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.qjc</groupId>
+            <artifactId>spring-demo-dao</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

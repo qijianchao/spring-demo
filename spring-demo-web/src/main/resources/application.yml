@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: spring-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_study?serverTimezone=GMT
+    username: root
+    password: ps123456#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: localhost
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
+
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+  #type-aliases-package: com.qjc.spring.demo.dao.entity
+  #configuration: # 指定config-location后这里就不允许放置configuration配置了，否则冲突
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
