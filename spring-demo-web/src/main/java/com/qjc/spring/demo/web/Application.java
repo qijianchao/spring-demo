@@ -13,6 +13,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Application {
 
     public static void main(String[] args) {
+        // 初始化日志路径 user.dir 表示该项目根目录
+        String rootPath = System.getProperty("user.dir");
+        System.setProperty("log.base",rootPath);
+
         SpringApplication.run(Application.class, args);
     }
 
